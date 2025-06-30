@@ -50,8 +50,8 @@ Welcome to your **Personalized Productivity Dashboard**—a web app designed to 
 
 - **HTML5** for structure
 - **CSS3** for styling (with light/dark mode)
-- **JavaScript** for all the magic
-- **Local Storage** so your data sticks around
+- **JavaScript**
+- **Local Storage** 
 
 ---
 
@@ -59,6 +59,4 @@ Welcome to your **Personalized Productivity Dashboard**—a web app designed to 
 
 This dashboard is open source—use it, share it, and make it your own.
 
----
 
-*Stay organized. Stay motivated. Make every day productive!*
