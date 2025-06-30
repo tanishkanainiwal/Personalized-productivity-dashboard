@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="container py-3">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <div class="d-flex align-items-center gap-2">
+        <div class="user-avatar"></div>
+        <span class="user-name fw-semibold">User</span>
+        <button onclick="changeUserName()" class="btn btn-sm btn-outline-info">Change Name</button>
+      </div>
+      <div class="dark-mode-switch d-flex align-items-center gap-2">
+        <i class="fas fa-moon"></i>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+          <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+        </div>
+        <i class="fas fa-sun"></i>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <div class="time-widget d-flex align-items-center mb-3">
+      <i class="fas fa-clock me-2"></i>
+      <span id="greeting" class="me-2"></span>
+      <span id="clock"></span>
+    </div>
+
+    <div class="weather-widget d-flex align-items-center mb-3">
+      <i class="fas fa-map-marker-alt weather-icon"></i>
+      <div class="weather-info">
+        <h4>Your Location</h4>
+        <p>Click below to get your location</p>
+      </div>
+    </div>
+
+    <div class="mb-4 d-flex gap-2">
+      <button onclick="getUserLocation()" class="btn btn-primary">Get My Location (GPS)</button>
+      <button onclick="getLocationByIP()" class="btn btn-secondary">Get Location by IP</button>
+    </div>
+
+    <section class="widget">
+      <h2 class="h4 mb-3">To-Do List</h2>
+      <div class="task-filter mb-2">
+        <button class="active" onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('pending')">Pending</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+      </div>
+
+      <div class="d-flex gap-2 mb-3">
+        <input type="text" id="new-task" class="form-control" placeholder="What needs to be done?">
+        <button id="add-task" class="btn btn-success">Add</button>
+      </div>
+
+      <ul id="tasks-list" class="list-unstyled"></ul>
+    </section>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="widget quote-widget">
+          <h2 class="h4 mb-3">Daily Quote</h2>
+          <p id="daily-quote"></p>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="widget notes-widget">
+          <h2 class="h4 mb-3">Quick Notes</h2>
+          <textarea id="notes" class="form-control" placeholder="Write your notes here..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer text-center mt-4">
+      <p class="mb-0">© 2024 Productivity Dashboard</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

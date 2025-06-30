@@ -1,0 +1,285 @@
+body {
+  background-color: #f0f5f9;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: #1e2a3a;
+  color: #f8f9fa;
+}
+
+.dashboard {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+[data-bs-theme="dark"] .dashboard {
+  background-color: rgba(35, 45, 63, 0.95);
+}
+
+.widget {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+[data-bs-theme="dark"] .widget {
+  background-color: #2d3b50;
+}
+
+#tasks-list {
+  list-style: none;
+  padding: 0;
+}
+
+#tasks-list li {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-bs-theme="dark"] #tasks-list li {
+  background-color: #3a4b63;
+}
+
+#tasks-list li.completed span {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+#tasks-list li button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+#tasks-list li button.complete-btn {
+  background-color: #28a745;
+  margin-left: 0;
+}
+
+.task-filter {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-filter button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.task-filter button.active {
+  background-color: #4a6fa5;
+  color: white;
+}
+
+[data-bs-theme="dark"] .task-filter button {
+  background-color: #3a4b63;
+  color: #f8f9fa;
+  border-color: #4a5b74;
+}
+
+[data-bs-theme="dark"] .task-filter button.active {
+  background-color: #a7c4bc;
+  color: #2d3142;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+[data-bs-theme="dark"] .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-widget {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #4a6fa5;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+[data-bs-theme="dark"] .time-widget {
+  background-color: rgba(46, 58, 80, 0.7);
+  color: #a7c4bc;
+}
+
+.weather-widget {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+[data-bs-theme="dark"] .weather-widget {
+  background-color: #2d3b50;
+}
+
+.weather-icon {
+  font-size: 2rem;
+  color: #4a6fa5;
+}
+
+.weather-info {
+  flex: 1;
+}
+
+.weather-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #2d3142;
+}
+
+[data-bs-theme="dark"] .weather-info h4 {
+  color: #f8f9fa;
+}
+
+.weather-info p {
+  margin: 0.25rem 0 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+[data-bs-theme="dark"] .weather-info p {
+  color: #a7c4bc;
+}
+
+.quote-widget {
+  font-style: italic;
+  color: #555555;
+  text-align: center;
+}
+
+[data-bs-theme="dark"] .quote-widget {
+  color: #e9ecef;
+}
+
+.notes-widget textarea {
+  width: 100%;
+  height: 140px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e6ed;
+  background-color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .notes-widget textarea {
+  background-color: #3a4b63;
+  color: #f8f9fa;
+  border-color: #4a5b74;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+[data-bs-theme="dark"] .user-avatar {
+  color: #f8f9fa;
+}
+
+.user-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3142;
+}
+
+[data-bs-theme="dark"] .user-name {
+  color: #f8f9fa;
+}
+
+.dark-mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-mode-switch i {
+  font-size: 1.2rem;
+}
+
+.dark-mode-switch i.fa-moon {
+  color: #4a6fa5;
+}
+
+[data-bs-theme="dark"] .dark-mode-switch i.fa-moon {
+  color: #a7c4bc;
+}
+
+.dark-mode-switch i.fa-sun {
+  color: #f8d56b;
+}
+
+header {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+[data-bs-theme="dark"] header {
+  background-color: #2d3b50;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
